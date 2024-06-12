@@ -1,5 +1,9 @@
 <?php
 
+// Aggiunta
+
+use App\Http\Controllers\HouseController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +20,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/houses', [HouseController::class, 'index'])->name('houses');
